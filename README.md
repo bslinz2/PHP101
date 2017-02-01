@@ -45,6 +45,55 @@ Do you already have a Database you can work with? If not go and create one!
 ##Lets code
 Above you see different folders these folders are different projects you can take a look at! I tried my best to comment everything.
 ***
-**Do not make a one-to-one copy of the code, and also change the comments!**
+**Don't make a one-to-one copy of the code, also modify the comments!**
 ***
+
+##Create a database connection
+*As seen in `movie/database.php`*
+
+```php
+// Create a connection variable
+$connection = new MySqli("localhost", "root", "", "DATABASE_NAME");
+
+// Set the encoding of the Database
+$connection->set_charset('utf8');
+```
+
+##Select data from the database
+*As seen in `movie/searchActorResult.php`*
+
+```php
+// Include database.php to use the $connection variable 
+include "database.php";
+
+// Create the SQL query
+// The ? after the like is a security feature, it prevents SQL injections
+$sql = "SELECT p.bDate, s.Name
+        FROM Person p, Sozialversicherung s
+        WHERE p.SozId = s.id
+        AND p.city LIKE ?";
+        
+// Preparing the sql select with the connection
+$stm = $connection->prepare($sql);
+
+// Prepare the variables you want to bind (replace the ? with)
+// Replace SEARCH_TERM with the actual variable
+$city = "%SEARCH_TERM%";
+
+//Bind the variables
+$stmt->bind_param("s", $city);
+
+// Execute the sql statement
+$stmt->execute();
+
+// Get the result of the sql statement
+$result = $stmt->get_result();
+
+// Then fetch the result as an array, so index is a row
+$actorRows = $result->fetch_all(MYSQLI_ASSOC);
+
+// Dump the variable to better understand the data
+var_dump($actorRows);
+```
+
 **Happy coding!**
