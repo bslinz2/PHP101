@@ -19,7 +19,7 @@ You may need to execute XAMPP as an Administrator
 
 2. Start all needed services
 * Locate the freshly opened "XAMPP Control Panel"
-* Start "Apache" and "MySQL"
+* Start "Apache" **and** "MySQL"
 
 3. Create the folder for the new Project
 * Locate the XAMPP folder, usually under `C:/xampp/htdocs`
