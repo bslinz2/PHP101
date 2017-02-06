@@ -8,6 +8,11 @@
       include "nav.php";
       if (isset($_POST["produktionsFirma"])) {
         $prodName = $_POST["produktionsFirma"];
+        $prodNameCnt = strlen($prodName);
+        if ($prodNameCnt < 3) {
+            echo "<h3>Please enter more then 3 characters!</h3>";
+            die();
+        }
       } else {
           echo "<h3>Keine Produktionsfirma angegeben!</h3>";
           die();
