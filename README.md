@@ -48,6 +48,9 @@ Above you see different folders these folders are different projects you can tak
 **Don't make a one-to-one copy of the code, also modify the comments!**
 ***
 
+##Test your code
+*Check `test/testProtocol.xlsx`*
+
 ##Create a database connection
 *As seen in `movie/database.php`*
 
