@@ -4,6 +4,7 @@ This guide will teach you methods like creating Webpages, interacting with SQL d
 ##Setup your environment
 * You need some sort of Webserver, I like [XAMPP](https://www.apachefriends.org/de/index.html).
 * Download your IDE (Development environment). I use [Atom](https://atom.io/), it is a hackable code editor
+    * Alternativly you can use [Submlime Text](https://www.sublimetext.com/3)
 * I also encourage you to use [Google Chrome](https://www.google.de/chrome/browser/desktop/index.html?brand=CHBD&gclid=CLue5aGG7dECFY8Q0wodYzMBlg), it is one of the best, if not the best browser available
 * Download [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
