@@ -43,6 +43,10 @@ Do you already have a Database you can work with? If not go and create one!
 
 ###Hurray, we are all set now!
 
+***
+###Take a look at [www.idoodler.de/php101](http://www.idoodler.de/php101) for more infos and a detailed description
+***
+
 ##Lets code
 Above you see different folders these folders are different projects you can take a look at! I tried my best to comment everything.
 ***
